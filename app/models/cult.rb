@@ -1,5 +1,6 @@
 class Cult
   attr_reader :name, :location, :founding_year, :slogan
+  attr_accessor :followers
 
   @@all = []
 
@@ -14,7 +15,9 @@ class Cult
   end
 
   def recruit_follower(person)
+    BloodOath.new(DateTime.now, person, self)
     @followers << person
+    person.cults << self
   end
 
   def cult_population

@@ -12,6 +12,11 @@ heavens_gate = Cult.new("Heaven's Gate", "San Diego", 1974, "The UFO Two")
 manson_family = Cult.new("Manson Family", "San Francisco", 1967, "Hippie culture")
 raelians = Cult.new("Raelians", "Geneva", 1974, "Movement for the Welcoming of the Elohim, Creators of Humanity")
 
+# followers 
+tori = Follower.new("Tori", 26, "Help others")
+kevin = Follower.new("Kevin", 31, "Make money")
+allen = Follower.new("Allen", 28, "Aliens are among us")
+
 binding.pry
 
 puts "Mwahahaha!" # just in case pry is buggy and exits
