@@ -13,4 +13,8 @@ class BloodOath
   def self.all
     @@all
   end 
+
+  def self.first_oath
+    @@all[0]
+  end 
 end 

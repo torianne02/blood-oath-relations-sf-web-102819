@@ -16,6 +16,18 @@ class Follower
     cult.recruit_follower(self)
   end 
 
+  def my_cults_slogans 
+    @cults.map { |cult| puts cult.slogan }
+  end 
+
+  def self.most_active
+    @@all.max_by { |follower| follower.cults.length }
+  end 
+
+  def self.top_ten
+    @@all.sort { |follower| follower.cults.length }[0..9].map { |follower| follower.name }
+  end 
+
   def self.all 
     @@all 
   end 
